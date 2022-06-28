@@ -7,37 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turing Machine Simulator</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/dropdown.js"></script>
 </head>
 
 <body>
     <!--Header Awal-->
     <header>
-        <div id="nav"><a href="#">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <a href="#" class="drop_btn" onclick="dropdownFunction()">
-                                Operasi
-                            </a>
-                            <div class="drop_content" id="myDropdown">
-                                <a href="turing_tambah.html">Pertambahan</a>
-                                <a href="turing_kurang.html">Pengurangan</a>
-                                <a href="turing_kali.html">Perkalian</a>
-                                <a href="turing_bagi.html">Pembagian</a>
-                                <a href="turing_pangkat.html">Perpangkatan</a>
-                                <a href="turing_faktorial.html">Faktorial</a>
-                                <a href="turing_logaritma.html">Logaritma Biner</a>
-                                <a href="turing_ck.html">Celcius - Kelvin</a>
-                                <a href="turing_cf.html">Celcius - Fahrenheit</a>
-                                <a href="turing_kc.html">Kelvin - Celcius</a>
-                                <a href="turing_kf.html">Kelvin - Fahrenheit</a>
-                                <a href="turing_fc.html">Fahrenheit - Celcius</a>
-                                <a href="turing_fk.html">Fahrenheit - Kelvin</a>
-                            </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="drop_btn" onclick="dropdownFunction()">
+                            Operasi
+                        </a>
+                        <div class="drop_content" id="myDropdown">
+                            <a href="turing_tambah.html">Pertambahan</a>
+                            <a href="turing_kurang.html">Pengurangan</a>
+                            <a href="turing_kali.html">Perkalian</a>
+                            <a href="turing_bagi.html">Pembagian</a>
+                            <a href="turing_pangkat.html">Perpangkatan</a>
+                            <a href="turing_faktorial.html">Faktorial</a>
+                            <a href="turing_logaritma.html">Logaritma Biner</a>
+                            <a href="turing_ck.html">Celcius - Kelvin</a>
+                            <a href="turing_cf.html">Celcius - Fahrenheit</a>
+                            <a href="turing_kc.html">Kelvin - Celcius</a>
+                            <a href="turing_kf.html">Kelvin - Fahrenheit</a>
+                            <a href="turing_fc.html">Fahrenheit - Celcius</a>
+                            <a href="turing_fk.html">Fahrenheit - Kelvin</a>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </header>
     <!--Header Akhir-->
@@ -133,21 +134,6 @@
         </div>
     </main>
     <!--Main Akhir-->
-
-    <script>
-        // Dropdown
-        function dropdownFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-        window.onclick = function (e) {
-            if (!e.target.matches('.drop_btn')) {
-                var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>
