@@ -1,3 +1,3 @@
-# TubesTuringMachineA6
+# Tubes Turing Machine
 
-Turing Machine
+Group project mengenai Turing Machine oleh kelompok 6
