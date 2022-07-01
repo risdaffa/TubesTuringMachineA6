@@ -1,11 +1,11 @@
 function enableButton(index) {
     controller[index].disabled = false;
-    controller[index].style.backgroundColor = "rgb(56, 55, 109)";
+    controller[index].style.backgroundColor = "#37366B";
 }
 
 function disableButton(index) {
     controller[index].disabled = true;
-    controller[index].style.backgroundColor = "white";
+    controller[index].style.backgroundColor = "#e1e1e1";
 }
 
 function enableSpeed() {
@@ -13,8 +13,6 @@ function enableSpeed() {
     speed2.disabled = false;
     speed3.disabled = false;
     speed4.disabled = false;
-    speed5.disabled = false;
-    speed6.disabled = false;
 }
 
 function disableSpeed() {
@@ -22,28 +20,20 @@ function disableSpeed() {
     speed2.disabled = true;
     speed3.disabled = true;
     speed4.disabled = true;
-    speed5.disabled = true;
-    speed6.disabled = true;
 }
 
 function determineSpeed() {
     if (speed1.checked == true) {
-        return 1000;
+        return 500;
     }
     else if (speed2.checked == true) {
-        return 400;
-    }
-    else if (speed3.checked == true) {
         return 200;
     }
-    else if (speed4.checked == true) {
+    else if (speed3.checked == true) {
         return 100;
     }
-    else if (speed5.checked == true) {
+    else if (speed4.checked == true) {
         return 50;
-    }
-    else if (speed6.checked == true) {
-        return 25;
     }
 }
 
@@ -153,9 +143,7 @@ let looper;
 let tapeCells = []; // Isi tape turing machine
 const tmTape = document.getElementById("tmTape"); // tape
 const controller = document.querySelectorAll(".controller");
-let speed1 = document.getElementById("025");
-let speed2 = document.getElementById("050");
-let speed3 = document.getElementById("100");
-let speed4 = document.getElementById("200");
-let speed5 = document.getElementById("400");
-let speed6 = document.getElementById("1000");  
+let speed1 = document.getElementById("050");
+let speed2 = document.getElementById("100");
+let speed3 = document.getElementById("200");
+let speed4 = document.getElementById("500");
