@@ -51,20 +51,20 @@
     <div class="cont">
         <div class="">
             <h3>Input :</h3>
-            <input type="number" name="num1" id="num1" autocomplete="off" placeholder="m">
-            <input type="text" id="op" value="^" readonly>
-            <input type="number" name="num2" id="num2" autocomplete="off" placeholder="n" /><br>
-            <button id="equal" class="btn" onmousedown="execute()">submit</button>
-            <h3>Hasil perhitungan : <span id="ans">0</span></h3>
+            <input type="number" name="num1" id="num1" autocomplete="off" placeholder="x">
+            ^
+            <input type="number" name="num2" id="num2" autocomplete="off" placeholder="y"><br>
+            <button id="equal" class="btn" onmousedown="execute()">submit</button><br>
             <br>
-            <h3>
-                Format Input: 0<sup>x</sup>10<sup>y</sup>1 | Format Output: 0<sup>x<sup>y</sup></sup>
-            </h3>
+            <h3>Format Input: 0<sup>x</sup>C0<sup>y</sup>C</h3>
+            <h3>Format Output: 0<sup>x<sup>y</sup></sup></h3>
         </div>
-
+        
         <div class="tmTape-wrapper" id="tmTape">
             <!-- tempat tape turing machine -->
         </div>
+        
+        <h3>Hasil perhitungan : <span id="ans">0</span></h3><br>
 
         <div class="form-wrapper">
             <button disabled onmousedown="executePlay()" class="controller btn">Play</button>
@@ -77,11 +77,6 @@
         <div class="spdbtn">
             <h3>Pilih Kecepatan</h3>
             <div class="" id="speed-btn">
-                <label for="025" class="spdlabel">
-                    <input type="radio" name="playSpeed" id="025" disabled>
-                    <span>0.25x</span>
-                </label>
-                <br>
                 <label for="050" class="spdlabel">
                     <input type="radio" name="playSpeed" id="050" disabled>
                     <span>0.5x</span>
@@ -97,14 +92,9 @@
                     <span>2.0x</span>
                 </label>
                 <br>
-                <label for="400" class="spdlabel">
-                    <input type="radio" name="playSpeed" id="400" disabled>
-                    <span>4.0x</span>
-                </label>
-                <br>
-                <label for="1000" class="spdlabel">
-                    <input type="radio" name="playSpeed" id="1000" disabled>
-                    <span>10.0x</span>
+                <label for="500" class="spdlabel">
+                    <input type="radio" name="playSpeed" id="500" disabled>
+                    <span>5.0x</span>
                 </label>
                 <br>
             </div>
