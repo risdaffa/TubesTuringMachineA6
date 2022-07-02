@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logaritma Biner - Turing Machine Simulator</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/turing.css">
+    <!-- js -->
+    <script src="js/dropdown.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="drop_btn" onclick="dropdownFunction()">
+                            Operasi
+                        </a>
+                        <div class="drop_content" id="myDropdown">
+                            <a href="turing_tambah.html">Pertambahan</a>
+                            <a href="turing_kurang.html">Pengurangan</a>
+                            <a href="turing_kali.html">Perkalian</a>
+                            <a href="turing_bagi.html">Pembagian</a>
+                            <a href="turing_pangkat.html">Perpangkatan</a>
+                            <a href="turing_faktorial.html">Faktorial</a>
+                            <a href="turing_logaritma.html">Logaritma Biner</a>
+                            <a href="turing_ck.html">Celcius - Kelvin</a>
+                            <a href="turing_cf.html">Celcius - Fahrenheit</a>
+                            <a href="turing_kc.html">Kelvin - Celcius</a>
+                            <a href="turing_kf.html">Kelvin - Fahrenheit</a>
+                            <a href="turing_fc.html">Fahrenheit - Celcius</a>
+                            <a href="turing_fk.html">Fahrenheit - Kelvin</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="judul_operasi">
+        <h1>Logaritma Biner</h1>
+    </div>
+
+    <div class="cont">
+        <div class="">
+            <h3>Input :</h3>
+            <input type="number" name="num1" id="num1" autocomplete="off" placeholder="n"><br>
+            <button id="equal" class="btn" onmousedown="execute()">submit</button><br>
+            <br>
+            <h3>Format Input: 0<sup>n</sup></h3>
+            <h3>Format Output: 0<sup>Log<sub>2</sub>(n)</sup></h3>
+        </div>
+        
+        <div class="tmTape-wrapper" id="tmTape">
+            <!-- tempat tape turing machine -->
+        </div>
+        
+        <h3>Hasil perhitungan : <span id="ans">0</span></h3><br>
+
+        <div class="form-wrapper">
+            <button disabled onmousedown="executePlay()" class="controller btn">Play</button>
+            <button disabled onmousedown="executePause()" class="controller btn">Pause</button>
+            <button disabled onmousedown="executeNextMove()" class="controller btn">Next
+                Move</button>
+            <button disabled onmousedown="executeClear()" class="controller btn">Clear</button>
+        </div><br>
+
+        <div class="spdbtn">
+            <h3>Pilih Kecepatan</h3>
+            <div class="" id="speed-btn">
+                <label for="050" class="spdlabel">
+                    <input type="radio" name="playSpeed" id="050" disabled>
+                    <span>0.5x</span>
+                </label>
+                <br>
+                <label for="100" class="spdlabel">
+                    <input type="radio" name="playSpeed" id="100" disabled checked>
+                    <span>1.0x</span>
+                </label>
+                <br>
+                <label for="200" class="spdlabel">
+                    <input type="radio" name="playSpeed" id="200" disabled>
+                    <span>2.0x</span>
+                </label>
+                <br>
+                <label for="500" class="spdlabel">
+                    <input type="radio" name="playSpeed" id="500" disabled>
+                    <span>5.0x</span>
+                </label>
+                <br>
+            </div>
+        </div>
+
+        <script src="js/tape.js"></script>
+        <script src="js/myFunction.js"></script>
+        <script src="js/turing_logaritma.js"></script>
+    </div>
+</body>
+
+</html>
