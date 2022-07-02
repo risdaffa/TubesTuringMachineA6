@@ -79,11 +79,11 @@ function executeNextMove() {
 
         // STATE 0
         if (state == 0) {
-            // 0, 0 / R to state 1
+            // 0 / 0, R to state 1
             if (tapeCells[it].symbol == "0") {
                 move("0", 1, 1);
             }
-            // 1, 1 / R to state 11
+            // 1 / 1, R to state 11
             else if (tapeCells[it].symbol == "1") {
                 move("1", 1, 11);
             }
@@ -91,11 +91,11 @@ function executeNextMove() {
 
         // STATE 1
         else if (state == 1) {
-            // 0, 0 / R to state 1
+            // 0 / 0, R to state 1
             if (tapeCells[it].symbol == "0") {
                 move("0", 1, 1);
             }
-            // X, X / R to state 2
+            // X / X, R to state 2
             else if (tapeCells[it].symbol == "X") {
                 move("X", 1, 2);
             }
@@ -103,11 +103,11 @@ function executeNextMove() {
 
         // STATE 2
         else if (state == 2) {
-            // 0, 0 / R to state 3
+            // 0 / 0, R to state 3
             if (tapeCells[it].symbol == "0") {
                 move("0", 1, 3);
             }
-            // 1, Y / L to state 6
+            // 1 / Y, L to state 6
             else if (tapeCells[it].symbol == "1") {
                 move("Y", -1, 6);
             }
@@ -115,11 +115,11 @@ function executeNextMove() {
 
         // STATE 3
         else if (state == 3) {
-            // 0, 0 / R to state 3
+            // 0 / 0, R to state 3
             if (tapeCells[it].symbol == "0") {
                 move("0", 1, 3);
             }
-            // B, B / L to state 4
+            // B / B, L to state 4
             else if (tapeCells[it].symbol == "B") {
                 move("B", -1, 4);
             }
@@ -127,7 +127,7 @@ function executeNextMove() {
 
         // STATE 4
         else if (state == 4) {
-            // 0, B / L to state 5
+            // 0 / B, L to state 5
             if (tapeCells[it].symbol == "0") {
                 move("B", -1, 5);
             }
@@ -135,11 +135,11 @@ function executeNextMove() {
 
         // STATE 5
         else if (state == 5) {
-            // 0, 0 / L to state 5
+            // 0 / 0, L to state 5
             if (tapeCells[it].symbol == "0") {
                 move("0", -1, 5);
             }
-            // X, 0 / L to state 10
+            // X / 0, L to state 10
             else if (tapeCells[it].symbol == "X") {
                 move("0", -1, 10);
             }
@@ -147,19 +147,19 @@ function executeNextMove() {
 
         // STATE 6
         else if (state == 6) {
-            // X, X / L to state 6
+            // X / X, L to state 6
             if (tapeCells[it].symbol == "X") {
                 move("X", -1, 6);
             }
-            // Y, Y / L to state 6
+            // Y / Y, L to state 6
             else if (tapeCells[it].symbol == "Y") {
                 move("Y", -1, 6);
             }
-            // 0, Y / R to state 7
+            // 0 / Y, R to state 7
             else if (tapeCells[it].symbol == "0") {
                 move("Y", 1, 7);
             }
-            // B, B / R to state 9
+            // B / B, R to state 9
             else if (tapeCells[it].symbol == "B") {
                 move("B", 1, 9);
             }
@@ -167,19 +167,19 @@ function executeNextMove() {
 
         // STATE 7
         else if (state == 7) {
-            // X, X / R to state 7
+            // X / X, R to state 7
             if (tapeCells[it].symbol == "X") {
                 move("X", 1, 7);
             }
-            // Y, Y / R to state 7
+            // Y / Y, R to state 7
             else if (tapeCells[it].symbol == "Y") {
                 move("Y", 1, 7);
             }
-            // B, B / L to state 8
+            // B / B, L to state 8
             else if (tapeCells[it].symbol == "B") {
                 move("B", -1, 8);
             }
-            // 1, Y / L to state 6
+            // 1 / Y /, to state 6
             else if (tapeCells[it].symbol == "1") {
                 move("Y", -1, 6);
             }
@@ -187,19 +187,19 @@ function executeNextMove() {
 
         // STATE 8
         else if (state == 8) {
-            // X, B / L to state 8
+            // X / B, L to state 8
             if (tapeCells[it].symbol == "X") {
                 move("B", -1, 8);
             }
-            // Y, B / L to state 8
+            // Y / B, L to state 8
             else if (tapeCells[it].symbol == "Y") {
                 move("B", -1, 8);
             }
-            // 0, 0 / R to state 10
+            // 0 / 0, R to state 10
             else if (tapeCells[it].symbol == "0") {
                 move("0", 1, 10);
             }
-            // B, B / R to state 10
+            // B / B, R to state 10
             else if (tapeCells[it].symbol == "B") {
                 move("B", 1, 10);
             }
@@ -207,19 +207,19 @@ function executeNextMove() {
 
         // STATE 9
         else if (state == 9) {
-            // X, B / R to state 9
+            // X / B, R to state 9
             if (tapeCells[it].symbol == "X") {
                 move("B", 1, 9);
             }
-            // Y, B / R to state 9
+            // Y / B, R to state 9
             else if (tapeCells[it].symbol == "Y") {
                 move("B", 1, 9);
             }
-            // 1, 1 / R to state 9
+            // 1 / 1, R to state 9
             else if (tapeCells[it].symbol == "1") {
                 move("1", 1, 9);
             }
-            // B, 1 / R to state 10
+            // B / 1, R to state 10
             else if (tapeCells[it].symbol == "B") {
                 move("1", 1, 10, 1);
             }
@@ -232,11 +232,11 @@ function executeNextMove() {
         
         // STATE 11
         else if (state == 11) {
-            // 1, 1 / R to state 11
+            // 1 / 1, R to state 11
             if (tapeCells[it].symbol == "1") {
                 move("1", 1, 11);
             }
-            // X, X / R to state 12
+            // X / X, R to state 12
             else if (tapeCells[it].symbol == "X") {
                 move("X", 1, 12);
             }
@@ -244,11 +244,11 @@ function executeNextMove() {
 
         // STATE 12
         else if (state == 12) {
-            // 1, 1 / R to state 13
+            // 1 / 1, R to state 13
             if (tapeCells[it].symbol == "1") {
                 move("1", 1, 13);
             }
-            // 0, Y / L to state 16
+            // 0 / Y, L to state 16
             else if (tapeCells[it].symbol == "0") {
                 move("Y", -1, 16);
             }
@@ -256,11 +256,11 @@ function executeNextMove() {
 
         // STATE 13
         else if (state == 13) {
-            // 1, 1 / R to state 13
+            // 1 / 1, R to state 13
             if (tapeCells[it].symbol == "1") {
                 move("1", 1, 13);
             }
-            // B, B / L to state 14
+            // B / B, L to state 14
             else if (tapeCells[it].symbol == "B") {
                 move("B", -1, 14);
             }
@@ -268,7 +268,7 @@ function executeNextMove() {
 
         // STATE 14
         else if (state == 14) {
-            // 1, B / L to state 15
+            // 1 / B, L to state 15
             if (tapeCells[it].symbol == "1") {
                 move("B", -1, 15);
             }
@@ -276,11 +276,11 @@ function executeNextMove() {
 
         // STATE 15
         else if (state == 15) {
-            // 1, 1 / L to state 15
+            // 1 / 1, L to state 15
             if (tapeCells[it].symbol == "1") {
                 move("1", -1, 15);
             }
-            // X, 1 / L to state 10
+            // X / 1, L to state 10
             else if (tapeCells[it].symbol == "X") {
                 move("1", -1, 10);
             }
@@ -288,19 +288,19 @@ function executeNextMove() {
 
         // STATE 16
         else if (state == 16) {
-            // X, X / L to state 16
+            // X / X, L to state 16
             if (tapeCells[it].symbol == "X") {
                 move("X", -1, 16);
             }
-            // Y, Y / L to state 16
+            // Y / Y, L to state 16
             else if (tapeCells[it].symbol == "Y") {
                 move("Y", -1, 16);
             }
-            // 1, Y / R to state 17
+            // 1 / Y, R to state 17
             else if (tapeCells[it].symbol == "1") {
                 move("Y", 1, 17);
             }
-            // B, B / R to state 19
+            // B / B, R to state 19
             else if (tapeCells[it].symbol == "B") {
                 move("B", 1, 19);
             }
@@ -308,19 +308,19 @@ function executeNextMove() {
 
         // STATE 17
         else if (state == 17) {
-            // X, X / R to state 17
+            // X / X, R to state 17
             if (tapeCells[it].symbol == "X") {
                 move("X", 1, 17);
             }
-            // Y, Y / R to state 17
+            // Y / Y, R to state 17
             else if (tapeCells[it].symbol == "Y") {
                 move("Y", 1, 17);
             }
-            // B, B / L to state 18
+            // B / B, L to state 18
             else if (tapeCells[it].symbol == "B") {
                 move("B", -1, 18);
             }
-            // 0, Y / L to state 16
+            // 0 / Y, L to state 16
             else if (tapeCells[it].symbol == "0") {
                 move("Y", -1, 16);
             }
@@ -328,19 +328,19 @@ function executeNextMove() {
 
         // STATE 18
         else if (state == 18) {
-            // X, B / L to state 18
+            // X / B, L to state 18
             if (tapeCells[it].symbol == "X") {
                 move("B", -1, 18);
             }
-            // Y, B / L to state 18
+            // Y / B, L to state 18
             else if (tapeCells[it].symbol == "Y") {
                 move("B", -1, 18);
             }
-            // 1, 1 / R to state 10
+            // 1 / 1, R to state 10
             else if (tapeCells[it].symbol == "1") {
                 move("1", 1, 10);
             }
-            // B, B / R to state 10
+            // B / B, R to state 10
             else if (tapeCells[it].symbol == "B") {
                 move("B", 1, 10);
             }
@@ -348,19 +348,19 @@ function executeNextMove() {
 
         // STATE 19
         else if (state == 19) {
-            // X, B / R to state 19
+            // X / B, R to state 19
             if (tapeCells[it].symbol == "X") {
                 move("B", 1, 19);
             }
-            // Y, B / R to state 19
+            // Y / B, R to state 19
             else if (tapeCells[it].symbol == "Y") {
                 move("B", 1, 19);
             }
-            // 0, 0 / R to state 19
+            // 0 / 0, R to state 19
             else if (tapeCells[it].symbol == "0") {
                 move("0", 1, 19);
             }
-            // B, 0 / R to state 10
+            // B / 0, R to state 10
             else if (tapeCells[it].symbol == "B") {
                 move("0", 1, 10, 1);
             }
